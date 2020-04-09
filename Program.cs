@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace random
 {
   class Program
@@ -16,10 +17,29 @@ namespace random
         random.Next(6),
 };
 
-for (int i=0; i<numbers.Count; i++) {
-   // Determine if the current loop index is contained inside of the `numbers` list. Print a message to the console indicating whether the index is in the list.
-   
-}
+      for (int i = 0; i < numbers.Count; i++)
+      {
+        // Determine if the current loop index is contained inside of the `numbers` list. Print a message to the console indicating whether the index is in the list.
+        // int result = numbers.Find(item => item == i);
+
+        
+          if (numbers.Exists(item => item == i))
+          {
+
+            Console.WriteLine("numbers list contains {0}", i);
+          }
+          else
+          {
+            Console.WriteLine("numbers list does not contain {0}", i);
+
+          }
+
+        }
+        foreach (var item in numbers)
+        {
+          Console.Write("\n");
+          Console.Write(item);
+        }
+      }
     }
   }
-}
